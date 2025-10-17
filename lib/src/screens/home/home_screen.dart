@@ -188,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     
                     // Tagline
                     Text(
-                      'Shop Local • Support Local • Grow Together',
+                      'Shop Local • Support Local',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white.withOpacity(0.8),

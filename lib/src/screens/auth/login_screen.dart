@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:maseru_marketplace/src/localization/app_localizations.dart';
 import 'package:maseru_marketplace/src/providers/auth_provider.dart';
-import 'package:maseru_marketplace/src/providers/language_provider.dart';
 import 'package:maseru_marketplace/src/providers/theme_provider.dart';
 import 'package:maseru_marketplace/src/widgets/auth/role_selector.dart';
 import 'package:provider/provider.dart';
@@ -373,7 +372,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final languageProvider = Provider.of<LanguageProvider>(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
     final appLocalizations = AppLocalizations.of(context);
     final isDarkMode = themeProvider.isDarkMode;
@@ -602,40 +600,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ],
-                    ),
-
-                    // Language Toggle
-                    Container(
-                      margin: const EdgeInsets.only(top: 16),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[100],
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.language, color: Colors.grey[600], size: 20),
-                          const SizedBox(width: 8),
-                          Text(
-                            appLocalizations.translate('common.language'),
-                            style: TextStyle(
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          TextButton(
-                            onPressed: _isSubmitting ? null : () => languageProvider.toggleLanguage(),
-                            child: Text(
-                              languageProvider.currentLanguage == 'en' ? 'Sesotho' : 'English',
-                              style: TextStyle(
-                                color: Theme.of(context).primaryColor,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
                   ],
                 ),
