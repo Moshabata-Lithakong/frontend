@@ -188,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     
                     // Tagline
                     Text(
-                      'Shop Local • Support Local',
+                      'Shop Local • Support Local • Grow Together',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white.withOpacity(0.8),
@@ -245,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Icon(Icons.local_shipping, color: Colors.orange[200], size: 20),
                           const SizedBox(width: 8),
                           Text(
-                            'Free delivery to taxi ranks • Secure payments • Local vendors',
+                            'Free delivery to taxi ranks • Secure payments ',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.white.withOpacity(0.9),
